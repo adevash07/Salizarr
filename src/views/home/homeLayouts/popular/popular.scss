@@ -1,0 +1,84 @@
+@use "../../../../styles/index" as *;
+.popular {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .menu {
+    width: 70%;
+    align-self: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .carousel {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    overflow-x: scroll;
+    
+
+    .inner-0,
+    .inner {
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    .carousel-item {
+      max-width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2px solid #eceef7;
+      border-radius: 15px;
+      padding: 1rem;
+      .imgCon {
+        width: 9rem;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        filter: drop-shadow(20px 10px 20px rgba(143, 92, 32, 0.1))
+          drop-shadow(10px 5px 10px rgba(143, 92, 32, 0.1));
+          img {
+            width: 100%
+          }
+      }
+      .nameTime {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      p {
+        white-space: normal;
+      }
+    }
+    
+  }
+  ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      border: none;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: $lightGrey;
+      border-radius: 10px;
+    }
+}
+
+.view {
+      width: 95%;
+      display:flex;
+      
+      align-items: center;
+      .hr {
+        width:80%;
+        border-bottom: 3px solid black;
+      }
+    }
+

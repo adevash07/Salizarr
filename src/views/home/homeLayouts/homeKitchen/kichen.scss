@@ -1,0 +1,241 @@
+@use "../../../../styles/index" as *;
+.kitchen {
+  cursor: url("../../../../images/kitchen/pickHand.png");
+  min-height: 100vh;
+  background-color: $primary;
+  background-image: url(../../../../images//kitchen/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    font-size: 2rem;
+    width: 40rem;
+    height: 2rem;
+    overflow: hidden;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .kitchen__Intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 10rem;
+    gap: 2rem;
+
+    .size {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+
+      &__sm,
+      &__md,
+      &__lg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        text-align: center;
+        vertical-align: middle;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+
+        &--active {
+          border-color: black;
+        }
+      }
+    }
+    .message {
+      animation: blinker 0.2s ease-in-out infinite,
+        typewriter 4s steps(60, end) alternate infinite;
+    }
+  }
+
+  .kitchenArena.animate {
+    transition: all 2s ease-in-out;
+    cursor: url("../../../../images/kitchen/pointHand.png"), auto;
+    svg {
+      width: 100%;
+      height: 100%;
+
+      #Ingredient {
+        animation-name: rotateIn;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+      }
+      #Cheese {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+          rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        perspective: 100em;
+        -webkit-perspective: 1600px;
+        animation-name: R-tXY;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in-out;
+
+        @include R-tXY(25deg, 170px, 45px, 0px, 0px, 0px);
+      }
+      #redpepperG {
+        animation-name: R-tXY;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+
+        @include R-tXY(45deg, 90px, 118px, 0px, 0px, 0px);
+      }
+      #pepperoniG {
+        animation-name: R-tXY;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+
+        @include R-tXY(25deg, -255px, 300px, 0px, 0px, 0px);
+      }
+      #BaconG {
+        animation-name: R-tXY;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+
+        @include R-tXY(25deg, -225px, 300px, 0px, 0px, 0px);
+      }
+      #BeefG {
+        animation-name: R-tXY;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        @include R-tXY(35deg, -680px, -129px, 0px, 0px, 0px);
+      }
+      #Knife {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+          rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        animation-name: rotateIn;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+      }
+    }
+  }
+
+  .unanimate {
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+.hr {
+  width: 85%;
+  
+}
+  }
+    
+  // // UNIANIMATE REVERSE OF ANIMATE
+  //   .kitchenArena.unanimate {
+  //   transition: all 2s ease-in-out;
+  //   cursor: url("../../../../images/kitchen/pointHand.png"), auto;
+  //   svg {
+  //     width: 100%;
+  //     height: 100%;
+
+  //     #Ingredient {
+  //       animation-name: rotateIn;    
+  //       animation-duration: 2s;
+  //       animation-timing-function: ease-in-out;
+  //     }
+  //     #Cheese {
+  //       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+  //         rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  //       perspective: 100em;
+  //       -webkit-perspective: 1600px;
+  //       animation-name: R-tXY;
+  //       animation-duration: 2.5s;
+  //       animation-timing-function: ease-in-out;
+  //       animation-direction: reverse;
+  //       animation-fill-mode: forwards;
+
+  //       @include R-tXY(25deg, 170px, 45px, 0px, 0px, 0px);
+  //       animation-direction: reverse;
+  //       animation-fill-mode: forwards;
+  //     }
+  //     #redpepperG {
+  //       animation-name: R-tXY;
+  //       animation-duration: 1s;
+  //       animation-timing-function: ease-in-out;
+  //       animation-direction: reverse;
+  //       animation-fill-mode: forwards;
+
+  //       @include R-tXY(45deg, 90px, 118px, 0px, 0px, 0px);
+  //     }
+  //     #pepperoniG {
+  //       animation-name: R-tXY;
+  //       animation-duration: 1s;
+  //       animation-timing-function: ease-in-out;
+  //       animation-direction: reverse;
+  //       animation-fill-mode: forwards;
+
+  //       @include R-tXY(25deg, -255px, 300px, 0px, 0px, 0px);
+  //     }
+  //     #BaconG {
+  //       animation-name: R-tXY;
+  //       animation-duration: 1.5s;
+  //       animation-timing-function: ease-in-out;
+  //       animation-direction: reverse;
+  //       animation-fill-mode: forwards;
+
+  //       @include R-tXY(25deg, -225px, 300px, 0px, 0px, 0px);
+  //     }
+  //     #BeefG {
+  //       animation-name: R-tXY;
+  //       animation-duration: 2s;
+  //       animation-timing-function: ease-in-out;
+  //       animation-direction: reverse;
+  //       animation-fill-mode: forwards;
+  //       @include R-tXY(35deg, -680px, -129px, 0px, 0px, 0px);
+
+  //     }
+  //     #Knife {
+  //       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+  //         rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  //       animation-name: rotateIn;
+  //       animation-duration: 3s;
+  //       animation-timing-function: ease-in-out;
+  //       animation-direction: forwards;
+  //       animation-fill-mode: backwards;
+  //     }
+  //   }
+  // }
+  //   // UNIANIMATE REVERSE OF ANIMATE
+
+}
+
+@keyframes blinker {
+  0% {
+    border-right: 3px solid $secondary;
+  }
+  50% {
+    border-right: none;
+  }
+  100% {
+    border-right: 3px solid $secondary;
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40rem;
+  }
+}

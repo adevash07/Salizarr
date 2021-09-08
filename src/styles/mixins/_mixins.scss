@@ -1,0 +1,19 @@
+@mixin R-tXY(
+  $rotateStart,
+  $translateXStart,
+  $translateYStart,
+  $rotateEnd,
+  $translateXEnd,
+  $translateYEnd
+) {
+  @keyframes R-tXY {
+    0% {
+      transform: rotate($rotateStart) translateX($translateXStart)
+        translateY($translateYStart);
+    }
+    100% {
+      transform: rotate($rotateEnd) translateX($translateXEnd)
+        translateY($translateYEnd);
+    }
+  }
+}

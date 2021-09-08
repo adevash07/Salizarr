@@ -1,0 +1,51 @@
+@use "../../styles/index" as *;
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  padding: 2% 5%;
+  justify-content: space-between;
+  padding-right: 15%;
+
+  .conLogo {
+    display: flex;
+  }
+  .nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+    text-align: center;
+
+    .active {
+      border-bottom: 2px solid $secondary;
+    }
+    .navList:hover {
+      border-bottom: 1px solid $secondary;
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      vertical-align: -webkit-baseline-middle;
+    }
+  }
+  .cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
