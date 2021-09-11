@@ -1,0 +1,104 @@
+@use "../../../styles/index" as *;
+.grid {
+  display: grid;
+  gap: 2rem;
+  padding: 0 5%;
+  padding-bottom: 2rem;
+  background-color: $primary;
+  padding-top: 4rem;
+
+  @include minWidth(768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include minWidth(1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__item {
+    position: relative;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(246, 183, 22, 0.4) -5px 5px,
+      rgba(246, 183, 22, 0.3) -10px 10px, rgba(246, 183, 22, 0.2) -15px 15px,
+      rgba(246, 183, 22, 0.1) -20px 20px, rgba(246, 183, 22, 0.05) -25px 25px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: white;
+    text-align: start;
+    &:hover .add {
+      animation: slideUp 0.5s ease-in-out forwards;
+    }
+    .imgCon {
+      background: linear-gradient(
+        45deg,
+        rgba(120, 68, 16, 1) 18%,
+        rgba(170, 121, 78, 1) 30%,
+        rgba(111, 58, 5, 1) 42%,
+        rgba(215, 117, 11, 1) 63%,
+        rgba(130, 73, 11, 1) 78%,
+        rgba(167, 99, 25, 1) 89%
+      );
+      height: 50%;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      img {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .ratings,
+    .menuDetails {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0px 0.5rem;
+      position: relative;
+      z-index: 2;
+      background-color: white;
+      margin: 0;
+
+      svg {
+        fill: #ffd700;
+        stroke: none;
+      }
+    }
+    .menuDetails {
+      flex-direction: column;
+      justify-content: start;
+      p:nth-child(3) {
+        font-weight: bold;
+        color: orangered;
+      }
+    }
+  }
+  .add {
+    position: absolute;
+    left: 0;
+    right: 0%;
+    height: 4rem;
+    background: rgba(25, 25, 25, 0.7);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    top: 55%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-4.5rem);
+    opacity: 1;
+  }
+}

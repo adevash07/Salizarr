@@ -1,4 +1,16 @@
-import { Italian, Lappetite, Silican, Speedy } from "../images/image";
+import {
+  Italian,
+  Lappetite,
+  Silican,
+  Speedy,
+  item1,
+  item2,
+  item3,
+  item4,
+  item5,
+  item6,
+  item7,
+} from "../images/image";
 const pizza = [
   {
     id: "1",
@@ -92,4 +104,115 @@ const pizza = [
   },
 ];
 
-export { pizza };
+const menuDishes = [
+  {
+    id: "1",
+    name: "Italian pizza",
+    price: 5000,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    img: item1,
+    type: pizza,
+  },
+  {
+    id: "2",
+    name: "Italian pizza",
+    price: 5000,
+    img: Italian,
+    type: pizza,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "3",
+    name: "L'appertitosa ",
+    ingredient: "Dough, Mozzarella, Cheddar, Blue, Parmesan",
+    price: 5000,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    img: item3,
+    type: pizza,
+  },
+  {
+    id: "4",
+    name: "Italian pizza",
+    price: 5000,
+    img: item4,
+    type: pizza,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "5",
+    name: "Italian pizza",
+    price: 5000,
+    img: Italian,
+    type: pizza,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "6",
+    name: "Silican",
+    ingredient: "Dough, Mozzarella, Cheddar, Blue, Parmesan",
+    price: 5000,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    img: item6,
+    type: pizza,
+  },
+  {
+    id: "7",
+    name: "Italian pizza",
+    price: 5000,
+    img: Italian,
+    type: pizza,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "8",
+    name: "Italian pizza",
+    price: 5000,
+    img: item7,
+    type: pizza,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "9",
+    name: "Speedy",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    price: 5000,
+
+    img: item5,
+    type: pizza,
+  },
+  {
+    id: "10",
+    name: "Italian pizza",
+    price: 5000,
+    img: item2,
+    type: pizza,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "11",
+    name: "Italian pizza",
+    price: 5000,
+    img: Italian,
+    type: pizza,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "12",
+    name: "Speedy",
+    ingredient: "Dough, Mozzarella, Cheddar, Blue, Parmesan",
+    price: 5000,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    img: item5,
+    type: pizza,
+  },
+  {
+    id: "13",
+    name: "Italian pizza",
+    price: 5000,
+    img: Italian,
+    type: pizza,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+];
+
+export { pizza, menuDishes };

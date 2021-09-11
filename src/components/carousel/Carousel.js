@@ -19,6 +19,8 @@ export default function Carousel({
   indicator,
   loop,
   swipe,
+  divide,
+  moveTime,
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -42,19 +44,19 @@ export default function Carousel({
       if (!onPause && loop) {
         updateIndex(activeIndex + 1);
       }
-    }, 1000);
+    }, moveTime);
     return () => {
       if (interval) {
         clearInterval(interval);
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeIndex, onPause, loop]);
+  }, [activeIndex, onPause, loop, moveTime]);
   return (
     <div {...handler} className='carousel'>
       <div
         className={activeIndex === 0 ? "inner-0" : "inner"}
-        style={{ transform: `translate(-${(activeIndex * width) / 4.5}%)` }}>
+        style={{ transform: `translate(-${(activeIndex * width) / divide}%)` }}>
         {React.Children.map(children, (child, index) => {
           return React.cloneElement(child, { width: `${width}%` });
         })}

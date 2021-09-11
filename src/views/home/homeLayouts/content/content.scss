@@ -1,0 +1,76 @@
+@use "../../../../styles/index" as *;
+.content {
+  padding-left: 5%;
+  padding-top: 7%;
+  padding-bottom: 7%;
+
+  .taste {
+    display: flex;
+    gap: 2rem;
+  }
+  .tasteText {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    h1 {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: bold;
+      color: $secondary;
+      font-size: 3.5rem;
+      margin: 0;
+    }
+    .btn {
+      margin-top: 2rem;
+      width: 50%;
+      min-width: 200px;
+      max-width: 300px;
+    }
+  }
+  .tasteImg {
+    .inner {
+      width: 200%;
+      transition: transform 2.5s;
+      gap: 4rem;
+    }
+    .inner-0 {
+      width: 200%;
+      transition: transform 2.5s;
+      gap: 4rem;
+    }
+    .carousel-item {
+      max-height: 30rem;
+      justify-content: flex-end;
+    }
+  }
+}
+.pizza {
+  margin-bottom: 4rem;
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    text-align: center;
+    padding: 0 20%;
+    font-weight: normal;
+    margin-bottom: 4rem;
+  }
+  .pizza__Grid {
+    position: relative;
+    width: 90%;
+    min-height: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column;
+    gap: 2rem;
+
+    &__item1 {
+      background-image: url("../../../../images/content/Rectangle\ 50.png");
+    }
+  }
+}

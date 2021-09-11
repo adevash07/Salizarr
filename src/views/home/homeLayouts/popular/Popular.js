@@ -24,10 +24,10 @@ export default function Popular({ data }) {
           <Button label='Drinks' />
         </li>
       </ul>
-      <Carousel width={20} loop={true}>
+      <Carousel width={20} loop={true} moveTime={2000} divide={4.5}>
         {data.map((pizza) => {
           return (
-            <CarouselItem >
+            <CarouselItem>
               <div className='imgCon'>
                 <img src={pizza.img} alt='' />
               </div>
@@ -41,9 +41,9 @@ export default function Popular({ data }) {
           );
         })}
       </Carousel>
-      <div className="view">
-      <div className="hr"></div>
-    <Button label="view All Recipes" blk={true}/>
+      <div className='view'>
+        <div className='hr'></div>
+        <Button label='view All Recipes' blk={true} />
       </div>
     </section>
   );

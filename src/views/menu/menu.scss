@@ -1,0 +1,81 @@
+@use "../../styles/index" as *;
+.menu {
+  margin-top: 5rem;
+  display: flex;
+  padding: 2rem 10px;
+  gap: 2rem;
+  .aside {
+    width: 20%;
+    border-radius: 10px;
+    padding: 1rem 10px;
+    height: 100vh;
+    background: rgba(246, 183, 22, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    color: $primary;
+
+    h3 {
+      height: 23px;
+      border-bottom: 1px solid white;
+    }
+    .categories {
+      &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      &__item {
+        font-size: 1rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: 0.5rem 0.5rem;
+        border-radius: 10px;
+        &:hover {
+          background-color: white;
+        }
+        &.active {
+          background-color: $primary;
+          color: white;
+        }
+      }
+    }
+  }
+  .main {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    width: 80%;
+    text-align: center;
+    &__header {
+      display: flex;
+      flex-direction: column;
+      @include secondary(0.8);
+      padding: 1rem 5%;
+      gap: 0.5rem;
+      justify-content: space-around;
+      color: white;
+    }
+    .view {
+      width: 90%;
+      align-self: center;
+      font-family: "Allison", cursive;
+      .btn {
+        font-weight: bold;
+        font-size: 2rem;
+      }
+
+      .hr {
+        width: 100%;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 2rem;
+      font-family: "Allison", cursive;
+    }
+  }
+}

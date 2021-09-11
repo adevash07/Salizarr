@@ -1,6 +1,6 @@
 import React from "react";
 import Kitchen from "../home/homeLayouts/homeKitchen/Kitchen";
-import Header from "../../components/header/Header";
+import Content from "../home/homeLayouts/content/Content";
 import Popular from "./homeLayouts/popular/Popular";
 import { pizza } from "data/pizza";
 let ValueList = [
@@ -11,9 +11,9 @@ let ValueList = [
 export default function Home() {
   return (
     <div className='home'>
-      <Header />
       <Kitchen ValueList={ValueList} />
       <Popular data={pizza} />
+      <Content />
     </div>
   );
 }

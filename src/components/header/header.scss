@@ -1,14 +1,16 @@
 @use "../../styles/index" as *;
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   display: flex;
-  padding: 2% 5%;
+  padding: 1% 5%;
   justify-content: space-between;
   padding-right: 15%;
+  background-color: $primary;
+  z-index: 3;
 
   .conLogo {
     display: flex;
@@ -38,10 +40,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $secondary;
-    width: 3rem;
-    height: 3rem;
     border-radius: 100%;
+    position: relative;
+
+    &__alert {
+      position: absolute;
+      padding: 2px 7px;
+      border-radius: 100%;
+      background-color: #b80f0a;
+      color: white;
+      top: -2px;
+      right: 2px;
+    }
 
     svg {
       width: 100%;
