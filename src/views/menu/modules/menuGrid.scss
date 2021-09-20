@@ -1,8 +1,8 @@
 @use "../../../styles/index" as *;
 .grid {
   display: grid;
-  gap: 2rem;
-  padding: 0 5%;
+  gap: 5rem;
+  padding: 0 7%;
   padding-bottom: 2rem;
   background-color: $primary;
   padding-top: 4rem;
@@ -10,7 +10,7 @@
   @include minWidth(768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @include minWidth(1024px) {
+  @include minWidth(1300px) {
     grid-template-columns: repeat(3, 1fr);
   }
   &__item {
@@ -26,8 +26,13 @@
     border-top-left-radius: 20px;
     background-color: white;
     text-align: start;
-    &:hover .add {
-      animation: slideUp 0.5s ease-in-out forwards;
+    transition: ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      animation: rocket 1s alternate infinite;
+      .add {
+        animation: slideUp 0.5s ease-in-out forwards;
+      }
     }
     .imgCon {
       background: linear-gradient(
@@ -77,9 +82,8 @@
     position: absolute;
     left: 0;
     right: 0%;
-    height: 4rem;
+    height: 3.3rem;
     background: rgba(25, 25, 25, 0.7);
-
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     top: 55%;
@@ -87,6 +91,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 3px 10px;
+    color: orangered;
   }
 }
 @keyframes slideUp {
@@ -100,5 +106,34 @@
   100% {
     transform: translateY(-4.5rem);
     opacity: 1;
+  }
+}
+
+@keyframes rocket {
+  0% {
+    box-shadow: rgba(246, 183, 22, 0.4) -0px 0px,
+      rgba(246, 183, 22, 0.3) 1px 1px, rgba(246, 183, 22, 0.2) 2px 2px,
+      rgba(246, 183, 22, 0.1) 3px 3px, rgba(246, 183, 22, 0.05) 4px 4px;
+  }
+  20% {
+    box-shadow: rgba(246, 183, 22, 0.4) 5px 5px;
+  }
+  40% {
+    box-shadow: rgba(246, 183, 22, 0.4) 5px 5px,
+      rgba(246, 183, 22, 0.3) 10px 10px;
+  }
+  60% {
+    box-shadow: rgba(246, 183, 22, 0.4) 5px 5px,
+      rgba(246, 183, 22, 0.3) 10px 10px, rgba(246, 183, 22, 0.2) 15px 15px;
+  }
+  80% {
+    box-shadow: rgba(246, 183, 22, 0.4) 5px 5px,
+      rgba(246, 183, 22, 0.3) 10px 10px, rgba(246, 183, 22, 0.2) 15px 15px,
+      rgba(246, 183, 22, 0.1) 20px 20px;
+  }
+  100% {
+    box-shadow: rgba(246, 183, 22, 0.4) 5px 5px,
+      rgba(246, 183, 22, 0.3) 10px 10px, rgba(246, 183, 22, 0.2) 15px 15px,
+      rgba(246, 183, 22, 0.1) 20px 20px, rgba(246, 183, 22, 0.05) 25px 25px;
   }
 }

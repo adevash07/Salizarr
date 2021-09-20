@@ -1,6 +1,4 @@
-import React from "react";
 import MenuGrid, { MenuGridItem } from "./modules/MenuGrid";
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { Button } from "components/index";
 import { BiBorderAll, BiDish, BiDrink } from "react-icons/bi";
 import { FaPizzaSlice } from "react-icons/fa";
@@ -73,39 +71,7 @@ export default function Menu({ menuDishes }) {
 
         <MenuGrid>
           {menuDishes.map((item) => {
-            return (
-              <MenuGridItem key={item.id}>
-                <div className='imgCon'>
-                  <img src={item.img} alt='#' />
-                </div>
-                <ul className='ratings'>
-                  <li className='ratings_star'>
-                    <FaStar />
-                  </li>
-                  <li className='ratings_star'>
-                    <FaStar />
-                  </li>
-                  <li className='ratings_star'>
-                    <FaStar />
-                  </li>
-                  <li className='ratings_star'>
-                    <FaStar />
-                  </li>
-                  <li className='ratings_star'>
-                    {item.id % 2 === 0 ? <FaStar /> : <FaStarHalfAlt />}
-                  </li>
-                </ul>
-                <div className='menuDetails'>
-                  <h4>{item.name}</h4>
-                  <p>{item.text}</p>
-                  <p>&#8358; {item.price}</p>
-                </div>
-                <div className='add'>
-                  <p>30min</p>
-                  <Button label='Add to Cart' />
-                </div>
-              </MenuGridItem>
-            );
+            return <MenuGridItem key={item.id} item={item}></MenuGridItem>;
           })}
         </MenuGrid>
       </div>

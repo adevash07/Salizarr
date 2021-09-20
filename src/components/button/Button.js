@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "./button.scss";
 
-const Button = ({ label, onClick, type = "button", active, blk }) => {
+const Button = ({ label, onClick, type = "button", active, blk, yel }) => {
   const handleClick = () => {
     if (onClick) {
       return onClick();
@@ -12,7 +12,9 @@ const Button = ({ label, onClick, type = "button", active, blk }) => {
   return (
     <button
       type={type}
-      className={`button btn ${blk && "blk"}  ${active ? "active" : ""}`}
+      className={`button btn ${blk && "blk"} ${yel && "yellow"}     ${
+        active ? "active" : ""
+      }`}
       onClick={handleClick}>
       {label}
     </button>

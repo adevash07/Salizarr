@@ -1,0 +1,109 @@
+@use "../../../styles/index" as *;
+.cartGrid {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  gap: 2rem;
+  padding: 1rem;
+  @include minWidth(700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include minWidth(886px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include minWidth(1200px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &__item {
+    position: relative;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: -2px 2px 16px 3px rgba(128, 128, 128, 0.7);
+
+    &:hover {
+      transform: scale(1.1);
+      .add {
+        animation: slideUp 0.5s ease-in-out forwards;
+      }
+    }
+
+    .imgCon {
+      background: linear-gradient(
+        45deg,
+        rgba(120, 68, 16, 1) 18%,
+        rgba(170, 121, 78, 1) 30%,
+        rgba(111, 58, 5, 1) 42%,
+        rgba(215, 117, 11, 1) 63%,
+        rgba(130, 73, 11, 1) 78%,
+        rgba(167, 99, 25, 1) 89%
+      );
+      height: 60%;
+      margin-bottom: 1rem;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.ratings {
+  align-self: center;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0px 0.5rem;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  margin: 0;
+
+  svg {
+    fill: #ffd700;
+    stroke: none;
+  }
+}
+
+.add {
+  position: absolute;
+  left: 0;
+  right: 0%;
+  height: 3.3rem;
+  background: rgba(25, 25, 25, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  top: 65%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 10px;
+  color: orangered;
+
+  button {
+    padding: 0.5rem 0.7rem;
+  }
+}
+// .cartGrid__item {
+//     height: 8rem;
+//     display: flex;
+//     flex-direction: column;
+//   }
+// @keyframes slideUp {
+//   0% {
+//     transform: translateY(0);
+//     opacity: 0;
+//   }
+//   50% {
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(-4.5rem);
+//     opacity: 1;
+//   }
+// }

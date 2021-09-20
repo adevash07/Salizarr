@@ -1,6 +1,6 @@
 import { React, useState, useRef, useLayoutEffect, useEffect } from "react";
 import "../homeKitchen/kichen.scss";
-import { ReactComponent as KitchenArena } from "../../../../images/kitchen/KitchenArena.svg";
+import { ReactComponent as KitchenArena } from "../../../../images/kitchen/KitchenArena (1).svg";
 import PropTypes from "prop-types";
 
 export default function Kitchen({ ValueList }) {
@@ -48,7 +48,7 @@ export default function Kitchen({ ValueList }) {
   const onScroll = () => {
     console.log("scroll");
     const topPos = pizzaRef.current.getBoundingClientRect().top;
-  console.log(topPos);
+    console.log(topPos);
     const scrollPos = window.scrollY + window.innerHeight;
     console.log(scrollPos);
     if (Math.sign(topPos) === 1) {

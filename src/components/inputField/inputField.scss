@@ -30,4 +30,19 @@
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
   }
+
+  .formGroup__input {
+    &.yel {
+      background-color: $secondary;
+      color: white;
+      border: none;
+
+      &:hover {
+        @include secondary(0.7);
+        &:active {
+          border: 0.5px solid white;
+        }
+      }
+    }
+  }
 }

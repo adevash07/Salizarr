@@ -1,32 +1,39 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { ReactComponent as Logo } from "../../images/header/logo.svg";
 import { ReactComponent as Cart } from "../../images/header/Cart.svg";
+import CartContext from "store/cartContext";
 import "./header.scss";
 
-export default function header() {
+export default function Header({ onCart }) {
+  const cartContent = useContext(CartContext);
+  const numberCartContent = cartContent.items.reduce((curNum, item) => {
+    return curNum + item.amount;
+  }, 0);
   return (
     <nav className='header'>
       <aside className='conLogo'>
         <Logo />
       </aside>
       <ul className='nav'>
-        <Link to='/' className='navList active'>
-          <a href='#3'>Home</a>
-        </Link>
-        <Link to='/aboutus' className='navList'>
-          <a href='#3'>About Us</a>
-        </Link>
-        <Link to='/menu' className='navList'>
-          <a href='#3'>Our Menu</a>
-        </Link>
-        <Link to='/contact' className='navList'>
-          <a href='#3'>Contact Us</a>
-        </Link>
+        <NavLink to='/' className='navList'>
+          Home
+        </NavLink>
+        <NavLink to='/aboutus' className='navList'>
+          About Us
+        </NavLink>
+        <NavLink to='/menu' className='navList'>
+          Our Menu
+        </NavLink>
+        <NavLink to='/contact' className='navList'>
+          Contact Us
+        </NavLink>
       </ul>
-      <aside className='cart'>
+      <aside className='cart' onClick={() => onCart()}>
         <Cart />
-        <span className='cart__alert'>{1}</span>
+        {numberCartContent !== 0 && (
+          <span className='cart__alert'>{cartContent.items.length}</span>
+        )}
       </aside>
     </nav>
   );

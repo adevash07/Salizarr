@@ -111,14 +111,14 @@ const menuDishes = [
     price: 5000,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     img: item1,
-    type: pizza,
+    type: "pizza",
   },
   {
     id: "2",
     name: "Italian pizza",
     price: 5000,
     img: Italian,
-    type: pizza,
+    cat: "pizza",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
@@ -128,14 +128,14 @@ const menuDishes = [
     price: 5000,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     img: item3,
-    type: pizza,
+    cat: "pizza",
   },
   {
     id: "4",
     name: "Italian pizza",
     price: 5000,
     img: item4,
-    type: pizza,
+    cat: "pizza",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
@@ -143,7 +143,7 @@ const menuDishes = [
     name: "Italian pizza",
     price: 5000,
     img: Italian,
-    type: pizza,
+    cat: "pizza",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
@@ -153,14 +153,14 @@ const menuDishes = [
     price: 5000,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     img: item6,
-    type: pizza,
+    cat: "pizza",
   },
   {
     id: "7",
     name: "Italian pizza",
     price: 5000,
     img: Italian,
-    type: pizza,
+    cat: "pizza",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
@@ -168,7 +168,7 @@ const menuDishes = [
     name: "Italian pizza",
     price: 5000,
     img: item7,
-    type: pizza,
+    cat: "pizza",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
@@ -178,14 +178,14 @@ const menuDishes = [
     price: 5000,
 
     img: item5,
-    type: pizza,
+    cat: "pizza",
   },
   {
     id: "10",
     name: "Italian pizza",
     price: 5000,
     img: item2,
-    type: pizza,
+    cat: "pizza",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
@@ -193,7 +193,7 @@ const menuDishes = [
     name: "Italian pizza",
     price: 5000,
     img: Italian,
-    type: pizza,
+    cat: "pizza",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
@@ -203,14 +203,14 @@ const menuDishes = [
     price: 5000,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     img: item5,
-    type: pizza,
+    cat: "pizza",
   },
   {
     id: "13",
     name: "Italian pizza",
     price: 5000,
     img: Italian,
-    type: pizza,
+    cat: "pizza",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];

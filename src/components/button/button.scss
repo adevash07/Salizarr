@@ -1,26 +1,39 @@
 @use "../../styles" as *;
 
 .button {
-  border: 1px solid $lightGrey;
   outline: none;
   padding: 0.7rem 2rem;
-  border-radius: 20px;
   cursor: pointer;
   background-color: $lightGrey;
   transition: 0.3s ease-in-out;
+  border: none;
 
   &.blk {
     background-color: $primary;
     color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 20px;
+    &:hover {
+      background-color: $secondary;
+    }
+    &:active {
+      @include secondary(0.7);
+      border: 0.5px solid white;
+    }
   }
-
-  &:hover,
-  &.active {
+  &.yellow {
     background-color: $secondary;
     color: white;
-    border: 1px solid $secondary;
+    border: none;
+
+    &:hover {
+      @include secondary(0.7);
+      &:active {
+        border: 0.5px solid white;
+      }
+    }
   }
+
   // &--outline {
   //   @extend .button;
   //   color: color(mainColor);
