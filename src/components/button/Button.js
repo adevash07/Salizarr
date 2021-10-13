@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import "./button.scss";
 
-const Button = ({ label, onClick, type = "button", active, blk, yel }) => {
+const Button = ({ label, onClick, type = "button", active, blk, yel, id }) => {
   const handleClick = () => {
     if (onClick) {
-      return onClick();
+      return onClick(id);
     }
 
     return null;

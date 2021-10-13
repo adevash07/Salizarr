@@ -1,0 +1,39 @@
+@use "../../styles" as *;
+
+.form {
+  width: 60%;
+  margin: 0 auto;
+  padding: 15px 0;
+  border-radius: 5px;
+  display: flex;
+  height: fit-content;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include maxWidth(767px) {
+    width: 100%;
+  }
+
+  .formGroup--input {
+    width: 45%;
+    margin-bottom: 30px;
+
+    @include maxWidth(575px) {
+      width: 100%;
+    }
+  }
+
+  .formGroup--textarea {
+    width: 100%;
+  }
+
+  .formGroup__label {
+    font-weight: 600;
+  }
+
+  .formGroup--submit {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+}

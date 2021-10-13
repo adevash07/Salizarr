@@ -94,6 +94,16 @@
     padding: 3px 10px;
     color: orangered;
   }
+  .skewup {
+    transition: 0.2s ease-in-out;
+    transform: rotate(-5deg) skewX(-20deg);
+    scroll-behavior: smooth;
+  }
+  .skewdown {
+    transition: 0.2s ease-in-out;
+    transform: rotate(5deg) skewX(20deg);
+    scroll-behavior: smooth;
+  }
 }
 @keyframes slideUp {
   0% {
@@ -111,12 +121,12 @@
 
 @keyframes rocket {
   0% {
-    box-shadow: rgba(246, 183, 22, 0.4) -0px 0px,
-      rgba(246, 183, 22, 0.3) 1px 1px, rgba(246, 183, 22, 0.2) 2px 2px,
-      rgba(246, 183, 22, 0.1) 3px 3px, rgba(246, 183, 22, 0.05) 4px 4px;
+    box-shadow: rgba(246, 183, 22, 0.4) 5px 5px,
+      rgba(246, 183, 22, 0.3) 10px 10px;
   }
   20% {
-    box-shadow: rgba(246, 183, 22, 0.4) 5px 5px;
+    box-shadow: rgba(246, 183, 22, 0.4) 5px 5px,
+      rgba(246, 183, 22, 0.3) 10px 10px;
   }
   40% {
     box-shadow: rgba(246, 183, 22, 0.4) 5px 5px,

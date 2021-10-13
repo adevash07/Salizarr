@@ -7,6 +7,7 @@ import { menuDishes } from "data/pizza";
 import Cart from "views/cart/Cart";
 import React, { useState } from "react";
 import CartProvider from "store/cartProvider";
+import Contactus from "views/contactUs/Contactus";
 
 function App() {
   const [iscart, setIscart] = useState(false);
@@ -26,6 +27,7 @@ function App() {
             path='/menu'
             render={(props) => <Menu {...props} menuDishes={menuDishes} />}
           />
+          <Route path='/contact' render={() => <Contactus />} />
         </Switch>
         <Footer />
       </CartProvider>

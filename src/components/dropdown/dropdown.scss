@@ -1,0 +1,41 @@
+@use "../../styles" as *;
+
+.dropdown {
+  .dropdown__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease-in-out;
+    padding: 15px 0;
+    border-bottom: 1px solid $lightGrey;
+    font-weight: 600;
+    cursor: pointer;
+    &.borderemove {
+      border-bottom: none;
+    }
+    svg {
+      transition: 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: $secondary;
+    }
+
+    &.active {
+      color: $secondary;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .dropdown__contact {
+    display: none;
+    padding: 10px 0;
+
+    &.active {
+      display: block;
+    }
+  }
+}

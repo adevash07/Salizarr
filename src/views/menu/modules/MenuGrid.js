@@ -4,12 +4,14 @@ import { InputField } from "components/index";
 import CartContext from "store/cartContext";
 import "./menuGrid.scss";
 
-export const MenuGridItem = ({ item }) => {
-  // console.log(item.id);
+export const MenuGridItem = ({ item, className }) => {
+  //////////////////// CONTEXT STATE
   const cartCxt = useContext(CartContext);
-
+  ///////////////////// LOCAL STATE
   const [inputState, setinputState] = useState({ amt: 0 });
+
   const amountInputRef = useRef();
+  ///////////////////// LOCAL STATE
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -25,7 +27,7 @@ export const MenuGridItem = ({ item }) => {
   };
 
   return (
-    <div key={item.id} className='grid__item'>
+    <div key={item.id} className={`grid__item ${className}`}>
       <div className='imgCon'>
         <img src={item.img} alt='#' />
       </div>
@@ -60,7 +62,7 @@ export const MenuGridItem = ({ item }) => {
           className='amt'
           value={inputState.amt}
           onChange={setinputState}
-          min='0'
+          min='1'
           max='100'
           ref={amountInputRef}
           id={item.id}

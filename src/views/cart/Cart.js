@@ -11,6 +11,17 @@ createPortal(<Cart />, port);
 
 export default function Cart({ onCart }) {
   const cartCxt = useContext(CartContext);
+  const addToCartHandler = (id) => {
+    cartCxt.addItem({
+      id,
+      amount: 1,
+    });
+  };
+  const removeFromCartHandler = (id) => {
+    cartCxt.removeItem({
+      id,
+    });
+  };
   return (
     <Overlay className='cartOverlay'>
       <section className='cartSection'>
@@ -54,18 +65,13 @@ export default function Cart({ onCart }) {
                     <Button
                       label='add +1'
                       yel={true}
-                      onClick={cartCxt.addItem({
-                        id: elem.id,
-                        amount: 1,
-                      })}></Button>
-                    {/* <Button
+                      id={elem.id}
+                      onClick={addToCartHandler}></Button>
+                    <Button
+                      id={elem.id}
                       label='remove -1'
                       yel={true}
-                     onClick={cartCxt.removeItem({
-                        id: elem.id,
-                        amount: -1,
-                     })}>
-                    </ Button> */}
+                      onClick={removeFromCartHandler}></Button>
                   </div>
                   {/* <ul className='ratings'>
                     <li className='ratings_star'>

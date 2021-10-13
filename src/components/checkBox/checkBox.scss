@@ -1,0 +1,81 @@
+@use "../../styles" as *;
+
+.formGroup--checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .formGroup__input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    margin-right: 4px;
+    background-color: color(white);
+    position: relative;
+    transition: 0.6s;
+
+    &:checked {
+      border: 1px solid #adb8c0;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+        inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
+        inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+      color: #99a1a7;
+      background-color: color(white);
+
+      &:after {
+        content: "\2714";
+        transform: rotate(15deg);
+        font-size: 15px;
+        position: absolute;
+        top: -2px;
+        left: 2px;
+        color: color(mainColor);
+      }
+    }
+  }
+}
+
+// .formgroup--input[type="checkbox"] {
+//   appearance: none;
+//   -webkit-appearance: none;
+//   border: 1px solid #cacece;
+//   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+//   padding: 7px;
+//   border-radius: 3px;
+//   margin-right: 0.7em;
+//   display: inline-block;
+//   cursor: pointer;
+
+//   &:checked {
+//     border: 1px solid #adb8c0;
+//     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+//       inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
+//       inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+//     color: #99a1a7;
+//     background-color: $deepBlue;
+
+//     + .formgroup--label {
+//       color: $deepBlue;
+//       font-weight: 600;
+//     }
+
+//     &:after {
+//       content: "\2714";
+//       transform: rotate(15deg);
+//       font-size: 12px;
+//       position: absolute;
+//       top: -2px;
+//       left: 2px;
+//       color: white;
+//     }
+//   }
+//   + .formgroup--label {
+//     font-weight: 500;
+//     transition: 0.6s;
+//     margin-bottom: 3px;
+//     cursor: pointer;
+//     color: $deepBlue;
+//   }
+// }
